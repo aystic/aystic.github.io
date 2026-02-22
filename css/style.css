@@ -1,0 +1,231 @@
+/* CSS style reset */
+/* 1. Use a more-intuitive box-sizing model */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+	margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		interpolate-size: allow-keywords;
+	}
+}
+
+body {
+	/* 4. Add accessible line-height */
+	line-height: 1.5;
+	/* 5. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* ========== */
+
+
+:root {
+	--bg: #ffffff;
+	--text: #111111;
+	--link: red;
+	--link-visited: blue;
+	--link-hover: orange;
+	--border-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #111111;
+		--text: #f1f1f1;
+		--link: #32cd32;
+		--link-visited: orange;
+		--link-hover: orange;
+		--border-color: #5c5c5c;
+	}
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--text);
+}
+
+a:link {
+	color: var(--link);
+}
+
+a:visited {
+	color: var(--link-visited);
+}
+
+a:hover {
+	color: var(--link-hover);
+}
+
+html {
+	font-family: "Space Mono";
+	display: flex;
+	justify-content: center;
+	scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	/* width: 75%; */
+	/* border: 1px solid var(--border-color); */
+	/* border-radius: 5px; */
+	/* margin: 50px 0; */
+	padding: 20px;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+main {
+	padding: 25px;
+}
+
+/* #main-header { */
+/* 	border-bottom: 1px solid var(--border-color); */
+/* } */
+
+#main-footer {
+	border-top: 1px solid var(--border-color);
+}
+
+.container {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	flex-wrap: nowrap;
+	align-content: center;
+	justify-content: center;
+}
+
+#profile-picture {
+	height: 200px;
+	border-radius: 100%;
+}
+
+.handshake {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.designation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.scroll-btns {
+	position: fixed;
+	bottom: 100px;
+	right: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.scroll-btns a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	text-decoration: none;
+	font-size: 1.2rem;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(12px) saturate(180%);
+	-webkit-backdrop-filter: blur(12px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
+	user-select: none;
+	-webkit-user-select: none;
+	transition: background-color 0.2s, transform 0.2s;
+}
+
+.scroll-btns a:hover {
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* hover for desktop only */
+@media (hover: hover) {
+	.scroll-btns a:hover {
+		transform: scale(1.1);
+	}
+}
