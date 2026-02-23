@@ -83,7 +83,7 @@ h6 {
 :root {
 	--bg: #ffffff;
 	--text: #111111;
-	--link: blue;
+	--link: #007df6;
 	--link-visited: purple;
 	--link-hover: #ff4500;
 	--border-color: #ebebeb;
@@ -92,7 +92,7 @@ h6 {
 	--scroll-btn-border-color: rgba(0, 0, 0, 0.3);
 	--scroll-btn-box-shadow: rgba(255, 255, 255, 0.15);
 	--scroll-btn-bg-color-hover: rgba(0, 0, 0, 0.25);
-	--heading-bg-color: rgba(0, 0, 0, 0.05);
+	--heading-bg-color: rgba(0, 0, 0, 0.075)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -108,7 +108,7 @@ h6 {
 		--scroll-btn-border-color: rgba(255, 255, 255, 0.3);
 		--scroll-btn-box-shadow: rgba(0, 0, 0, 0.15);
 		--scroll-btn-bg-color-hover: rgba(255, 255, 255, 0.25);
-		--heading-bg-color: rgba(255, 255, 255, 0.05);
+		--heading-bg-color: rgba(255, 255, 255, 0.075);
 	}
 }
 
@@ -252,8 +252,16 @@ section:target {
 	opacity: 0.5;
 }
 
+.content-list {
+	margin-left: 16px;
+}
+
 .content-list li {
 	list-style-type: circle;
+}
+
+.organization-list {
+	margin-left: 0;
 }
 
 .organization-list li {
@@ -264,9 +272,12 @@ section:target {
 	list-style-type: none;
 }
 
+ul.work-info-list {
+	margin: 18px;
+}
+
 .work-info-list li {
 	list-style-type: disc;
-	list-style-position: inside;
 }
 
 
