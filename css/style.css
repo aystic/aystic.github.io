@@ -284,7 +284,7 @@ ul.work-info-list {
 
 #header {
 	padding-bottom: 10px;
-	border-bottom: 1px solid var(--border-color);
+	/* border-bottom: 1px solid var(--border-color); */
 }
 
 #footer {
@@ -394,18 +394,22 @@ ul.work-info-list {
 }
 
 @media print {
-
 	@page {
 		margin: 1.5cm 2cm;
 		size: A4;
 	}
 
-	.scroll-btns {
+	#print-btn,
+	#copyright-text,
+	.scroll-btns,
+	#education-and-experience~hr,
+	#projects,
+	#projects~hr,
+	#blogs {
 		display: none;
 	}
 
-	#print-btn {
-		display: none;
+	a:visited {
+		color: var(--link);
 	}
-
 }
