@@ -120,78 +120,103 @@
 								<time datetime="2023-08/2025-09" class="col-2 align-right">08/23–09/25</time>
 							</div>
 							<div class="role row">
-								<p class="col-1">Founding Software Engineer (Sole Engineer)</p>
+								<p class="col-1">Founding Software Engineer</p>
 							</div>
 						</header>
 						<p class="work-summary">
-							As the first and only engineer at an early-stage startup, I took over a struggling, agency-built MVP and
-							transformed it into a scalable B2B platform that was eventually acquired by ClayHR. I acted as the
-							architect, developer, site reliability engineer and DevOps lead to turn this into a stable,
-							acquisition-ready product. My role required extreme adaptability, moving between deep architectural work
-							and rapid feature delivery to meet the demands of our first B2B customers.
+							In August 2023, I joined an early-stage startup as the sole engineer. I inherited an agency-built MVP that
+							was technically insolvent: it had 0% test coverage, ran on deprecated dependencies, and was plagued by
+							frequent production crashes. Over the next two years, I acted as the Architect, Lead Developer, and DevOps
+							Engineer, transforming a "black box" codebase into a high-performance B2B platform that was successfully
+							acquired by ClayHR.
 						</p>
 						<details class="work-details">
 							<summary>View detailed work</summary>
 
-							<section class="work-category" aria-labelledby="Technical Adaptability">
-								<h4 id="Technical Adaptability">Technical Adaptability</h4>
+							<section class="work-category" aria-labelledby="The Technical Rescue: Zero to Production">
+								<h4 id="The Technical Rescue: Zero to Production">The Technical Rescue: Zero to Production</h4>
+								<p>When I started, I had never used Ruby on Rails. Within weeks, I had self-taught the framework,
+									stabilized the existing features, and began shipping critical updates. I transitioned the company from
+									a "firefighting" culture to a stable, scalable engineering environment by:</p>
 								<ul role="list" class="work-info-list">
 									<li>
-										I had never used Ruby on Rails before joining. Within weeks, I was shipping critical bug fixes and
-										refactoring the core architecture. This experience taught me how to dive into complex, undocumented
-										systems and become productive immediately.
+										<b>Dockerizing the Environment:</b> I containerized the legacy stack to eliminate environment parity
+										issues
+										and created a repeatable, reliable build process.
+									</li>
+									<li>
+										<b>Proactive Observability:</b> I implemented a centralized error-handling suite using Bugsnag and
+										Slack,
+										building a real-time alerting pipeline that allowed us to resolve production issues before they
+										impacted our enterprise clients.
 									</li>
 								</ul>
 							</section>
 
-							<section class="work-category" aria-labelledby="Technical Leadership & Product Delivery">
-								<h4 id="Technical Leadership & Product Delivery">Technical Leadership & Product Delivery</h4>
+							<section class="work-category" aria-labelledby="Core Product: The Automation & Analytics Engine">
+								<h4 id="Core Product: The Automation & Analytics Engine">Core Product: The Automation & Analytics Engine
+								</h4>
+								I owned the full lifecycle of our core product features, ensuring they were robust enough for enterprise
+								HR departments.
 								<ul role="list" class="work-info-list">
 									<li>
-										End-to-End Development: Owned the full lifecycle of the product, from designing the
-										interactive Frontend (React/Redux) to architecting the Backend (Ruby on Rails).
+										<b>The "Journey" Builder:</b> Architected a flexible automation engine that allowed HR leaders to
+										trigger
+										complex employee workflows based on dynamic HRIS data (birthdays, tenure, or role changes).
 									</li>
 									<li>
-										The "Journey" Engine: Built the core product—a flexible automation engine allowing HR teams to
-										create complex employee "journeys" triggered by dynamic rules (e.g., birthdays, anniversaries, or
-										HRIS data changes).
+										<b>Enterprise Integrations:</b> Overhauled our OAuth 2.0 flows and built an event-driven ingestion
+										pipeline
+										for bulk HRIS data. This ensured secure, high-speed syncing with third-party platforms like Slack,
+										Twilio, and Merge.dev.
 									</li>
 									<li>
-										Third-Party Ecosystem: Implemented deep integrations with Slack (interactive messages and
-										channel syncing), Twilio (SMS automation), and SendGrid/Outlook/Gmail (tracking opens and clicks).
-									</li>
-									<li>
-										The analytics suite: Designed analytics pipeline for tracking opens, clicks, and engagement
-										aggregation using event-driven models and background jobs, enabling near real-time insights across
-										journeys.
+										<b>Business Intelligence Suite:</b> I designed a proprietary analytics engine from scratch. It
+										didn’t just
+										track opens and clicks; I engineered a custom query layer that allowed users to perform
+										multi-dimensional segmentation—filtering engagement trends by department, job role, and location to
+										derive actual employee sentiment.
 									</li>
 								</ul>
 							</section>
-							<section class="work-category" aria-labelledby="Performance & Reliability">
-								<h4 id="Performance & Reliability">Performance & Reliability</h4>
+
+							<section class="work-category" aria-labelledby="Performance Engineering at Scale">
+								<h4 id="Performance Engineering at Scale">Performance Engineering at Scale</h4>
+								<p>As our B2B client base grew, the initial architecture hit a ceiling. I led a deep-dive refactoring of
+									the data layer to support enterprise-grade datasets:</p>
 								<ul role="list" class="work-info-list">
 									<li>
-										Massive Scalability Gains: When the platform faced bottlenecks with complex filtering conditions for
-										employees, I refactored the
-										data layer to improve journey list response times by 300x and auto-add field fetching by 20x.
+										<b>300x Latency Reduction:</b>By optimizing SQL generation and implementing advanced indexing, I
+										reduced
+										response times for high-load filtering queries by 300x.
 									</li>
 									<li>
-										System Stability: To ensure reliability under load, I implemented a leaky bucket rate-limiting
-										algorithm for incoming webhooks and added background job throttling for external APIs
+										<b>Baseline Improvements:</b> Achieved a 20x speed increase across general system queries, ensuring
+										a
+										lag-free experience for managers handling 10,000+ employee records.
+									</li>
+									<li>
+										<b>Reliability:</b> Implemented a leaky-bucket rate-limiting algorithm and background job throttling
+										to
+										protect our infrastructure from external API spikes and webhook floods.
 									</li>
 								</ul>
 							</section>
 							<section class="work-category" aria-labelledby="DevOps & Infrastructure">
 								<h4 id="DevOps & Infrastructure">DevOps & Infrastructure</h4>
+								<p>I managed the company’s entire AWS footprint, treating infrastructure as a first-class citizen:</p>
 								<ul role="list" class="work-info-list">
 									<li>
-										Cost-Efficiency: Conducted a total audit of the AWS environment. By migrating deprecated RDS
-										instances and right-sizing instances, I cut the infrastructure bill in half while increasing
-										overall system performance.
+										<b>50% Cost Reduction:</b> Conducted a comprehensive audit of our cloud spend. By migrating
+										deprecated RDS
+										instances and right-sizing our EC2 fleet, I slashed the monthly infrastructure bill by half while
+										simultaneously improving system throughput.
 									</li>
 									<li>
-										Modernization: Dockerized the legacy application to solve "it works on my machine" issues and
-										transitioned the team to AWS Elastic Beanstalk with zero-downtime rolling updates.
+										<b>Zero-Downtime Deployments:</b> Migrated the stack to AWS Elastic Beanstalk with rolling updates.
+										I
+										implemented graceful shutdown protocols to ensure that no background jobs or data transactions were
+										lost during deployments.
 									</li>
 								</ul>
 							</section>
@@ -199,7 +224,8 @@
 								<h4 id="Acquisition & Transition">Acquisition & Transition</h4>
 								<ul role="list" class="work-info-list">
 									<li>
-										My work directly contributed to the company's acquisition by ClayHR. Post-acquisition, I was offered
+										My work directly contributed to the company's acquisition by ClayHR. I was
+										offered
 										a Full-Time Equivalent (FTE) position to lead the transition but chose to pursue new challenges as a
 										generalist engineer.
 									</li>

@@ -92,8 +92,8 @@ h6 {
 	--scroll-btn-border-color: rgba(0, 0, 0, 0.3);
 	--scroll-btn-box-shadow: rgba(255, 255, 255, 0.15);
 	--scroll-btn-bg-color-hover: rgba(0, 0, 0, 0.25);
-	--heading-bg-color: rgba(0, 0, 0, 0.075);
-	--details-bg-color: rgba(0, 0, 0, 0.025);
+	--heading-bg-color: rgba(0, 0, 0, 0.1);
+	--details-bg-color: rgba(0, 0, 0, 0.05);
 }
 
 @media (prefers-color-scheme: dark) {
